@@ -1,0 +1,191 @@
+<!doctype html>
+<html lang="en-ZA">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#ffffff" />
+  <meta name="description" content="YBiz for business — website development, e-commerce solutions and company registration support in South Africa." />
+  <title>YBiz for business | Your ideas. Our support.</title>
+  <style>
+    :root{--blue:#1674f9;--blue-dark:#075ad4;--navy:#101e3a;--muted:#5e6d89;--line:#dce6f5;--pale:#f2f7ff;--white:#fff;--shadow:0 18px 60px rgba(29,87,163,.09)}
+    *{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:18px}body{margin:0;font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;color:var(--navy);background:#fff;line-height:1.55;-webkit-font-smoothing:antialiased}
+    a{color:inherit;text-decoration:none}button,input,select,textarea{font:inherit}.wrap{width:min(1180px,calc(100% - 48px));margin-inline:auto}
+    .header{height:88px;display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid #edf2fa;background:rgba(255,255,255,.92);position:relative;z-index:2}
+    .brand{display:inline-flex;flex-direction:column;line-height:1;letter-spacing:-1.8px}.brand-name{font-size:39px;font-weight:850;letter-spacing:-2.4px}.brand-name .y{color:var(--blue)}.brand-sub{font-size:15px;letter-spacing:-.2px;margin:4px 0 0 3px;font-weight:500}.nav-link{font-size:15px;font-weight:650;color:var(--blue);padding:11px 0;border-bottom:2px solid var(--blue)}
+    .main{position:relative;overflow:hidden;background:radial-gradient(ellipse at 68% 48%,#f2f7ff 0%,#fff 56%);padding:54px 0 60px}.orb{position:absolute;pointer-events:none;background:linear-gradient(135deg,#e9f2ff,#f7faff);border-radius:50%;opacity:.9}.orb-one{width:320px;height:320px;left:-230px;top:-200px}.orb-two{width:400px;height:400px;left:-300px;bottom:-290px}.layout{position:relative;display:grid;grid-template-columns:minmax(0,1fr) minmax(440px,.98fr);gap:clamp(42px,7vw,100px);align-items:center}
+    .intro{padding:12px 0 22px}.hero-title{font-size:clamp(66px,7vw,100px);line-height:.95;letter-spacing:-7px;margin:0;font-weight:850}.hero-title .y{color:var(--blue)}.hero-subtitle{font-size:clamp(37px,4vw,56px);line-height:1.1;letter-spacing:-2.7px;font-weight:350;margin:8px 0 26px}.hero-copy{max-width:410px;font-size:21px;line-height:1.65;color:#526482;margin:0}.services{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:22px;margin-top:36px}.service{text-align:center;min-width:0}.service-icon{width:82px;height:82px;display:grid;place-items:center;margin:0 auto 12px;border-radius:26px;background:#eaf3ff;color:var(--blue)}.service-icon svg{width:43px;height:43px;stroke:currentColor;fill:none;stroke-width:1.9;stroke-linecap:round;stroke-linejoin:round}.service h2{font-size:18px;line-height:1.3;letter-spacing:-.45px;margin:0 0 10px;font-weight:750}.service p{font-size:14px;line-height:1.6;color:#687b9f;margin:0}
+    .contact-card{background:rgba(255,255,255,.9);border:1px solid #e0eafa;border-radius:22px;padding:32px 34px 26px;box-shadow:var(--shadow)}.eyebrow{font-size:13px;text-transform:uppercase;letter-spacing:.8px;color:var(--blue);font-weight:800;margin:0 0 8px}.form-title{font-size:clamp(28px,3vw,39px);line-height:1.15;letter-spacing:-1.5px;margin:0 0 10px;font-weight:800}.form-intro{font-size:16px;color:#71819e;margin:0 0 26px}.field{margin-bottom:18px}.field label{display:block;font-size:14px;font-weight:650;margin-bottom:8px}.control{width:100%;min-height:49px;border:1px solid #d6e2f3;border-radius:8px;background:#fff;color:var(--navy);padding:12px 14px;outline:none;transition:border-color .18s,box-shadow .18s}.control::placeholder{color:#9aa9c1}.control:focus{border-color:var(--blue);box-shadow:0 0 0 3px rgba(22,116,249,.12)}select.control{appearance:auto;color:#6f809e}textarea.control{min-height:105px;resize:vertical}.submit{width:100%;display:flex;align-items:center;justify-content:center;gap:11px;min-height:52px;border:0;border-radius:8px;background:linear-gradient(100deg,#1674f9,#1670f4);color:#fff;font-weight:750;cursor:pointer;box-shadow:0 7px 18px rgba(22,116,249,.16);transition:transform .15s,background .15s}.submit:hover{background:var(--blue-dark);transform:translateY(-1px)}.submit:focus-visible{outline:3px solid #a8ccff;outline-offset:3px}.submit svg{width:18px;height:18px;stroke:currentColor;fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}.privacy{font-size:12px;color:#8292ad;text-align:center;margin:14px 0 0}.form-status{display:none;padding:11px 12px;border-radius:8px;font-size:13px;margin-top:14px}.form-status.show{display:block}.form-status.error{color:#9b1c1c;background:#fff0f0}.form-status.info{color:#174d8f;background:#edf5ff}
+    .footer{background:var(--navy);color:#fff;padding:29px 0}.footer-inner{display:grid;grid-template-columns:180px 1fr 1.2fr;align-items:center;gap:30px}.footer .brand-name{font-size:32px}.footer .brand-sub{font-size:12px}.footer-brand{width:max-content}.footer-contact{border-left:1px solid #42516c;padding-left:30px}.footer-contact strong{display:block;font-size:14px;margin-bottom:5px}.footer-contact a,.footer-note{color:#cbd7eb;font-size:13px}.footer-note{justify-self:end}.footer-note strong{display:block;color:#fff;font-size:14px;margin-bottom:3px}.copyright{font-size:11px;color:#aebed8;margin-top:7px}
+    /* Motion system: subtle, quick, and respectful of reduced-motion settings */
+    @keyframes fade-up{from{opacity:0;transform:translateY(22px)}to{opacity:1;transform:translateY(0)}}
+    @keyframes float-in{from{opacity:0;transform:translateY(14px) scale(.97)}to{opacity:1;transform:translateY(0) scale(1)}}
+    @keyframes soft-drift{0%,100%{transform:translate3d(0,0,0)}50%{transform:translate3d(10px,-12px,0)}}
+    .header{animation:fade-up .55s ease-out both}
+    .intro{animation:fade-up .72s .08s ease-out both}
+    .contact-card{animation:fade-up .72s .18s ease-out both}
+    .orb-one{animation:soft-drift 11s ease-in-out infinite}
+    .orb-two{animation:soft-drift 14s ease-in-out infinite reverse}
+    .service{transition:transform .22s ease,filter .22s ease}
+    .service-icon{transition:transform .25s ease,background .25s ease,box-shadow .25s ease}
+    .service:hover{transform:translateY(-5px)}
+    .service:hover .service-icon{transform:translateY(-3px) rotate(-3deg);background:#e0edff;box-shadow:0 10px 24px rgba(22,116,249,.12)}
+    .control{transition:border-color .18s,box-shadow .18s,background .18s}
+    .submit{transition:transform .2s ease,box-shadow .2s ease,filter .2s ease}
+    .submit:hover{box-shadow:0 12px 26px rgba(22,116,249,.25);filter:saturate(1.08)}
+    .submit:active{transform:scale(.985)}
+    .reveal{opacity:0;transform:translateY(18px);transition:opacity .65s ease,transform .65s cubic-bezier(.2,.7,.2,1)}
+    .reveal.is-visible{opacity:1;transform:translateY(0)}
+    .service:nth-child(2){transition-delay:.08s}.service:nth-child(3){transition-delay:.16s}
+    @media(max-width:900px){.main{padding-top:42px}.layout{gap:30px}.contact-card{animation-delay:.12s}}
+    @media(max-width:900px){.layout{grid-template-columns:1fr;gap:34px;max-width:680px;margin-inline:auto}.intro{padding-bottom:0}.hero-title{font-size:clamp(66px,12vw,90px)}.hero-subtitle{font-size:clamp(38px,7vw,52px)}.hero-copy{font-size:18px}.services{gap:14px;margin-top:30px}.service-icon{width:70px;height:70px;border-radius:22px}.service-icon svg{width:37px;height:37px}.contact-card{padding:28px}.footer-inner{grid-template-columns:150px 1fr;row-gap:22px}.footer-note{grid-column:1/-1;justify-self:start}.footer-contact{padding-left:24px}}
+    @media(max-width:540px){
+      .wrap{width:min(100% - 32px,440px)}.header{height:72px;position:sticky;top:0;backdrop-filter:blur(14px);box-shadow:0 4px 20px rgba(16,30,58,.035)}
+      .brand-name{font-size:32px}.brand-sub{font-size:12px}.nav-link{font-size:14px;padding:9px 0}
+      .main{padding:31px 0 34px;background:radial-gradient(ellipse at 50% 18%,#f0f6ff 0%,#fff 64%)}.layout{gap:28px}
+      .intro{padding:6px 0 0}.hero-title{font-size:clamp(58px,17vw,72px);letter-spacing:-4.8px}.hero-subtitle{font-size:clamp(34px,10vw,41px);letter-spacing:-1.8px;margin:7px 0 15px}.hero-copy{font-size:15.5px;line-height:1.6;max-width:340px}
+      .services{gap:8px;margin-top:23px}.service{padding:12px 5px 10px;border:1px solid #edf3fc;border-radius:15px;background:rgba(255,255,255,.78)}
+      .service-icon{width:50px;height:50px;border-radius:16px;margin-bottom:9px}.service-icon svg{width:28px;height:28px}.service h2{font-size:12.5px;line-height:1.28;letter-spacing:-.2px;margin-bottom:0}.service p{display:none}
+      .contact-card{padding:22px 17px 19px;border-radius:18px;box-shadow:0 14px 38px rgba(29,87,163,.09)}.eyebrow{font-size:12px;margin-bottom:7px}.form-title{font-size:clamp(27px,8vw,32px);letter-spacing:-1px}.form-intro{font-size:14px;line-height:1.5;margin-bottom:20px}
+      .field{margin-bottom:15px}.field label{font-size:13px;margin-bottom:7px}.control{min-height:49px;padding:12px;font-size:16px;border-radius:10px}textarea.control{min-height:104px}.submit{min-height:52px;border-radius:10px;font-size:15px}.privacy{font-size:11px}
+      .footer{padding:25px 0 calc(25px + env(safe-area-inset-bottom))}.footer-inner{grid-template-columns:1fr;gap:18px}.footer-contact{border-left:0;border-top:1px solid #42516c;padding:16px 0 0}.footer-note{grid-column:auto;justify-self:start}.footer .brand-name{font-size:30px}
+    }
+    @media(max-width:370px){.wrap{width:calc(100% - 26px)}.services{gap:5px}.service{padding:10px 3px 9px;border-radius:12px}.service-icon{width:44px;height:44px;border-radius:14px}.service-icon svg{width:25px;height:25px}.service h2{font-size:11.5px}.hero-title{letter-spacing:-4px}.contact-card{padding-inline:14px}}
+    @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*::before,*::after{animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important;scroll-behavior:auto!important}.reveal{opacity:1;transform:none}}
+
+  </style>
+</head>
+<body>
+  <header class="header">
+    <div class="wrap" style="display:flex;align-items:center;justify-content:space-between;width:100%">
+      <a class="brand" href="#home" aria-label="YBiz for business home"><span class="brand-name"><span class="y">Y</span>Biz</span><span class="brand-sub">for business</span></a>
+      <a class="nav-link" href="#contact">Contact</a>
+    </div>
+  </header>
+
+  <main class="main" id="home">
+    <div class="orb orb-one" aria-hidden="true"></div><div class="orb orb-two" aria-hidden="true"></div>
+    <div class="wrap layout">
+      <section class="intro" aria-labelledby="hero-heading">
+        <h1 class="hero-title" id="hero-heading"><span class="y">Y</span>Biz</h1>
+        <p class="hero-subtitle">for business</p>
+        <p class="hero-copy">Your ideas. Our support.<br>Building a stronger business future in South Africa.</p>
+
+        <div class="services reveal" aria-label="Our services">
+          <article class="service">
+            <div class="service-icon" aria-hidden="true"><svg viewBox="0 0 48 48"><rect x="8" y="8" width="32" height="24" rx="2.5"/><path d="M4 38h40l-4-6H8l-4 6Z"/><path d="M20 38h8"/></svg></div>
+            <h2>Website<br>Development</h2>
+            <p>Modern, responsive websites for your business.</p>
+          </article>
+          <article class="service">
+            <div class="service-icon" aria-hidden="true"><svg viewBox="0 0 48 48"><path d="M5 8h5l4 23h23l5-16H12"/><circle cx="18" cy="38" r="2.5"/><circle cx="34" cy="38" r="2.5"/><path d="M15 25h23"/></svg></div>
+            <h2>E-commerce<br>Solutions</h2>
+            <p>Sell online and reach more customers.</p>
+          </article>
+          <article class="service">
+            <div class="service-icon" aria-hidden="true"><svg viewBox="0 0 48 48"><path d="M12 5h17l8 8v20H12z"/><path d="M29 5v9h8M18 21h12M18 27h8"/><circle cx="33" cy="35" r="8"/><path d="M29.5 34a3.5 3.5 0 1 1 7 0M27.5 41a6.5 6.5 0 0 1 11 0"/></svg></div>
+            <h2>Company<br>Registration</h2>
+            <p>Get your business legally registered in South Africa.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="contact-card reveal" id="contact" aria-labelledby="contact-heading">
+        <p class="eyebrow">Contact us</p>
+        <h2 class="form-title" id="contact-heading">Let’s work together.</h2>
+        <p class="form-intro">Tell us what you need and we’ll get back to you.</p>
+        <form id="contact-form">
+          <div class="field">
+            <label for="email">Email address <span aria-hidden="true">*</span></label>
+            <input class="control" type="email" id="email" name="email" placeholder="you@example.com" autocomplete="email" required />
+          </div>
+          <div class="field">
+            <label for="reason">What do you need help with? <span aria-hidden="true">*</span></label>
+            <select class="control" id="reason" name="reason" required>
+              <option value="" selected disabled>Select a reason</option>
+              <option value="Website Development">Website Development</option>
+              <option value="E-commerce Solutions">E-commerce Solutions</option>
+              <option value="Company Registration">Company Registration</option>
+              <option value="Business Registration & Management">Business Registration &amp; Management</option>
+              <option value="General Enquiry">General Enquiry</option>
+              <option value="Other">Other</option>
+            </select>
+          </div>
+          <div class="field">
+            <label for="message">Message <span style="font-weight:400;color:#8b99b0">(optional)</span></label>
+            <textarea class="control" id="message" name="message" rows="3" placeholder="Tell us a little about your project..."></textarea>
+          </div>
+          <div aria-hidden="true" style="position:absolute;left:-10000px;width:1px;height:1px;overflow:hidden">
+            <label for="website">Leave this field empty</label>
+            <input type="text" id="website" name="website" tabindex="-1" autocomplete="off" />
+          </div>
+          <button class="submit" type="submit"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m22 2-7 20-4-9-9-4Z"/><path d="M22 2 11 13"/></svg><span class="submit-label">Send Message</span> <span aria-hidden="true">→</span></button>
+          <p class="privacy">Your enquiry will be handled securely.</p>
+          <div class="form-status" id="form-status" role="status" aria-live="polite"></div>
+        </form>
+      </section>
+    </div>
+  </main>
+
+  <footer class="footer reveal">
+    <div class="wrap footer-inner">
+      <a class="brand footer-brand" href="#home" aria-label="YBiz for business home"><span class="brand-name"><span class="y">Y</span>Biz</span><span class="brand-sub">for business</span></a>
+      <div class="footer-contact"><strong>Contact us</strong><a href="mailto:info@ybiz.co.za">✉ &nbsp; info@ybiz.co.za</a></div>
+      <div class="footer-note"><strong>YBiz for business</strong>South Africa’s Digital Business Ecosystem.<div class="copyright">© <span id="year"></span> YBiz. Powered by Quosnap (Pty) Ltd.</div></div>
+    </div>
+  </footer>
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+    const revealItems = document.querySelectorAll('.reveal');
+    if ('IntersectionObserver' in window && !window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+      const revealObserver = new IntersectionObserver((entries, observer) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) { entry.target.classList.add('is-visible'); observer.unobserve(entry.target); }
+        });
+      }, { threshold: 0.12, rootMargin: '0px 0px -24px 0px' });
+      revealItems.forEach(item => revealObserver.observe(item));
+    } else { revealItems.forEach(item => item.classList.add('is-visible')); }
+    const form = document.getElementById('contact-form');
+    const status = document.getElementById('form-status');
+    const submitButton = form.querySelector('button[type="submit"]');
+    const submitLabel = form.querySelector('.submit-label');
+
+    form.addEventListener('submit', async (event) => {
+      event.preventDefault();
+      if (!form.reportValidity()) return;
+
+      status.className = 'form-status show info';
+      status.textContent = 'Sending your enquiry…';
+      submitButton.disabled = true;
+      submitButton.style.opacity = '0.75';
+      submitLabel.textContent = 'Sending…';
+
+      const payload = {
+        email: form.elements.email.value.trim(),
+        reason: form.elements.reason.value,
+        message: form.elements.message.value.trim(),
+        website: form.elements.website.value
+      };
+
+      try {
+        const response = await fetch('/api/contact', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify(payload)
+        });
+        const result = await response.json().catch(() => ({}));
+        if (!response.ok) throw new Error(result.error || 'We couldn’t send your enquiry. Please try again.');
+        status.className = 'form-status show info';
+        status.textContent = result.message || 'Thanks! Your enquiry has been sent.';
+        form.reset();
+      } catch (error) {
+        status.className = 'form-status show error';
+        status.textContent = error.message || 'Something went wrong. Please try again or email info@ybiz.co.za.';
+      } finally {
+        submitButton.disabled = false;
+        submitButton.style.opacity = '';
+        submitLabel.textContent = 'Send Message';
+      }
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,12 @@
+{
+  "name": "ybiz-business-landing-page",
+  "version": "1.0.0",
+  "private": true,
+  "description": "YBiz for business single-page website with Nodemailer contact form",
+  "scripts": {
+    "dev": "vercel dev"
+  },
+  "dependencies": {
+    "nodemailer": "^7.0.5"
+  }
+}
